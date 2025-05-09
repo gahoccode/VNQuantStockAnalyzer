@@ -1,14 +1,15 @@
-# Use Python 3.9 as base image for better compatibility with dependencies
-FROM python:3.9-slim
+# Use Python 3.10.11 as specified for the deployment
+FROM python:3.10.11-slim
 
 # Set working directory
 WORKDIR /app
 
-# Install system dependencies required for lxml and other packages
+# Install system dependencies required for lxml, git and other packages
 RUN apt-get update && apt-get install -y \
     build-essential \
     libxml2-dev \
     libxslt1-dev \
+    git \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements first for better caching
