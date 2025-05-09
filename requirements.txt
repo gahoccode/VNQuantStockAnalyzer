@@ -12,3 +12,5 @@ kaleido>=0.2.1
 pillow>=8.0.0
 openpyxl>=3.0.0
 git+https://github.com/phamdinhkhanh/vnquant.git
+gunicorn==23.0.0
+gevent>=22.10.2
